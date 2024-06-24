@@ -29,6 +29,10 @@ apply plugin: 'io.spring.dependency-management'
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'com.google.guava:guava:31.1-jre'
+	implementation 'cn.hutool:hutool-all:5.8.15'
+
+
 	compileOnly 'org.projectlombok:lombok'
 	runtimeOnly 'com.h2database:h2'
 	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
