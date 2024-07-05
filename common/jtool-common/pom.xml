@@ -22,6 +22,8 @@
         <module>orm</module>
         <module>web</module>
         <module>ws</module>
+        <module>cache</module>
+        <module>flowable</module>
     </modules>
 
     <properties>

@@ -8,25 +8,26 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="core" />
-        <module name="orm" />
-        <module name="ws" />
+        <module name="cache" />
         <module name="web" />
+        <module name="flowable" />
         <module name="tool-server" />
+        <module name="ws" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="common" target="19" />
-      <module name="core" target="19" />
-      <module name="orm" target="19" />
-      <module name="tool-server" target="19" />
-      <module name="web" target="19" />
-      <module name="ws" target="19" />
+      <module name="orm (1)" target="19" />
+      <module name="orm (2)" target="19" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="cache" options="-parameters" />
       <module name="core" options="-parameters" />
+      <module name="flowable" options="-parameters" />
       <module name="orm" options="-parameters" />
+      <module name="orm (1)" options="-parameters" />
+      <module name="orm (2)" options="-parameters" />
       <module name="tool-server" options="-parameters" />
       <module name="web" options="-parameters" />
       <module name="ws" options="-parameters" />
