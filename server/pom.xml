@@ -10,7 +10,7 @@
     </parent>
 
     <groupId>com.nie.tool.server</groupId>
-    <artifactId>tool-server</artifactId>
+    <artifactId>deti-dms-support</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
     <description>

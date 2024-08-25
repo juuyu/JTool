@@ -7,12 +7,43 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="core" />
+        <module name="protobuf" />
         <module name="cache" />
         <module name="web" />
         <module name="flowable" />
-        <module name="tool-server" />
+        <module name="deti-dms-support" />
+        <module name="orm" />
         <module name="ws" />
+        <module name="redis" />
+      </profile>
+      <profile name="Annotation profile for common" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$PROJECT_DIR$/../../software/apache-maven-3.8.7/repo-local/com/squareup/javapoet/1.13.0/javapoet-1.13.0.jar" />
+          <entry name="$PROJECT_DIR$/../../software/apache-maven-3.8.7/repo-local/com/google/truth/truth/0.39/truth-0.39.jar" />
+          <entry name="$PROJECT_DIR$/../../software/apache-maven-3.8.7/repo-local/com/google/guava/guava/23.4-android/guava-23.4-android.jar" />
+          <entry name="$PROJECT_DIR$/../../software/apache-maven-3.8.7/repo-local/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar" />
+          <entry name="$PROJECT_DIR$/../../software/apache-maven-3.8.7/repo-local/com/google/errorprone/error_prone_annotations/2.1.3/error_prone_annotations-2.1.3.jar" />
+          <entry name="$PROJECT_DIR$/../../software/apache-maven-3.8.7/repo-local/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar" />
+          <entry name="$PROJECT_DIR$/../../software/apache-maven-3.8.7/repo-local/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14.jar" />
+          <entry name="$PROJECT_DIR$/../../software/apache-maven-3.8.7/repo-local/junit/junit/4.12/junit-4.12.jar" />
+          <entry name="$PROJECT_DIR$/../../software/apache-maven-3.8.7/repo-local/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar" />
+          <entry name="$PROJECT_DIR$/../../software/apache-maven-3.8.7/repo-local/com/google/testing/compile/compile-testing/0.15/compile-testing-0.15.jar" />
+          <entry name="$PROJECT_DIR$/../../software/apache-maven-3.8.7/repo-local/com/google/truth/extensions/truth-java8-extension/0.37/truth-java8-extension-0.37.jar" />
+          <entry name="$PROJECT_DIR$/../../software/apache-maven-3.8.7/repo-local/com/google/auto/value/auto-value/1.5.3/auto-value-1.5.3.jar" />
+          <entry name="$PROJECT_DIR$/../../software/apache-maven-3.8.7/repo-local/com/google/auto/auto-common/0.9/auto-common-0.9.jar" />
+          <entry name="$PROJECT_DIR$/../../software/apache-maven-3.8.7/repo-local/com/google/jimfs/jimfs/1.1/jimfs-1.1.jar" />
+          <entry name="$PROJECT_DIR$/../../software/apache-maven-3.8.7/repo-local/org/mockito/mockito-core/2.13.0/mockito-core-2.13.0.jar" />
+          <entry name="$PROJECT_DIR$/../../software/apache-maven-3.8.7/repo-local/net/bytebuddy/byte-buddy/1.7.9/byte-buddy-1.7.9.jar" />
+          <entry name="$PROJECT_DIR$/../../software/apache-maven-3.8.7/repo-local/net/bytebuddy/byte-buddy-agent/1.7.9/byte-buddy-agent-1.7.9.jar" />
+          <entry name="$PROJECT_DIR$/../../software/apache-maven-3.8.7/repo-local/org/objenesis/objenesis/2.6/objenesis-2.6.jar" />
+          <entry name="$PROJECT_DIR$/../../software/apache-maven-3.8.7/repo-local/org/eclipse/jdt/core/compiler/ecj/4.6.1/ecj-4.6.1.jar" />
+          <entry name="$PROJECT_DIR$/../../software/apache-maven-3.8.7/repo-local/org/mapstruct/mapstruct-processor/1.5.5.Final/mapstruct-processor-1.5.5.Final.jar" />
+          <entry name="$PROJECT_DIR$/../../software/apache-maven-3.8.7/repo-local/org/mapstruct/mapstruct/1.5.5.Final/mapstruct-1.5.5.Final.jar" />
+        </processorPath>
+        <module name="core" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -24,11 +55,13 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="cache" options="-parameters" />
       <module name="core" options="-parameters" />
+      <module name="deti-dms-support" options="-parameters" />
       <module name="flowable" options="-parameters" />
       <module name="orm" options="-parameters" />
       <module name="orm (1)" options="-parameters" />
       <module name="orm (2)" options="-parameters" />
-      <module name="tool-server" options="-parameters" />
+      <module name="protobuf" options="-parameters" />
+      <module name="redis" options="-parameters" />
       <module name="web" options="-parameters" />
       <module name="ws" options="-parameters" />
     </option>

@@ -16,7 +16,6 @@ import org.aspectj.lang.annotation.Aspect;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.stereotype.Component;
 
-
 import java.util.Arrays;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -72,4 +71,6 @@ public class ProcessCheckHandler {
         }
         return joinPoint.proceed();
     }
+
+
 }

@@ -26,18 +26,15 @@ public class FlowableGroupRelationManagerImpl implements FlowableGroupRelationMa
         // TODO replace mybatis-flex
         List<FlowableCroupRelationDO> relationDOS = new ArrayList<>();
 
-        Map<String, List<String>> res = new HashMap<>();
-        if (CollectionUtil.isNotEmpty(relationDOS)) {
-            Map<String, List<FlowableCroupRelationDO>> collect = relationDOS.stream()
-                    .collect(Collectors.groupingBy(FlowableCroupRelationDO::getGroupKey));
-            for (Map.Entry<String, List<FlowableCroupRelationDO>> entry : collect.entrySet()) {
-                List<String> identityIds = entry.getValue().stream().sorted(Comparator.comparing(FlowableCroupRelationDO::getOrder))
-                        .map(FlowableCroupRelationDO::getIdentityId)
-                        .collect(Collectors.toList());
-                res.put(entry.getKey(), identityIds);
-            }
-        }
-        return res;
+        return CollectionUtil.isEmpty(relationDOS) ? new HashMap<>() :
+                relationDOS.stream()
+                        .collect(Collectors.groupingBy(FlowableCroupRelationDO::getGroupKey,
+                                Collectors.collectingAndThen(Collectors.toList(),
+                                        list -> list.stream()
+                                                .sorted(Comparator.comparingInt(FlowableCroupRelationDO::getOrder))
+                                                .map(FlowableCroupRelationDO::getIdentityId)
+                                                .collect(Collectors.toList()))
+                        ));
     }
 
     @Override

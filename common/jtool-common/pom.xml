@@ -24,6 +24,8 @@
         <module>ws</module>
         <module>cache</module>
         <module>flowable</module>
+        <module>protobuf</module>
+        <module>redis</module>
     </modules>
 
     <properties>
